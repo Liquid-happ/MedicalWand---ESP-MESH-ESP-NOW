@@ -102,8 +102,6 @@ Yêu cầu phần mềm bao gồm Arduino IDE (với Board ESP32), các thư vi�
 
 ## 6. Kết Quả Dự Án (Ảnh & Video)
 
-*(Thay thế các đường dẫn bên dưới bằng ảnh chụp/video thực tế của bạn)*
-
 ### 📸 Giao Diện Node-RED Dashboard
 
 Hệ thống sử dụng **Node-RED Dashboard 2.0** – phiên bản hoàn toàn mới được FlowFuse phát hành chính thức năm 2024, thay thế hoàn toàn Dashboard cũ (node-red-dashboard 3.x).
