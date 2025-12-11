@@ -1,0 +1,1616 @@
+[
+    {
+        "id": "cb55908037937082",
+        "type": "tab",
+        "label": "🏥 MEDICAL WAND",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ui_base_1",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "HỆ THỐNG GIÁM SÁT PHÒNG 1",
+            "hideToolbar": false,
+            "lockMenu": false,
+            "allowSwipe": false,
+            "allowTempTheme": true,
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "EMQX",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "nodered_phong1",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b97f3f40538901be",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "d66542aae9c74aee",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "theme_dark",
+        "type": "ui-theme",
+        "name": "Medical Dark",
+        "colors": {
+            "surface": "#1e1e1e",
+            "primary": "#00e676",
+            "bgPage": "#121212",
+            "groupBg": "#252525",
+            "groupOutline": "#333333"
+        }
+    },
+    {
+        "id": "tls_config",
+        "type": "tls-config",
+        "name": "EMQX SSL",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "emqxsl-ca.crt",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "broker_emqx",
+        "type": "mqtt-broker",
+        "name": "EMQX Private",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "tls_config",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "75da87b966f02d68",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "31e7658a1e96107d",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "653e39ae48740caf",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "3c2629202219d1b6",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "bfefe239ee3bdba4",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "c68435f0ef229780",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "34d494c6a56ce7e8",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "71b11c4447407c52",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "228e36822a3a2f58",
+        "type": "tls-config",
+        "name": "TLS Conf",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "bc5f1411ff50f89b",
+        "type": "ui_tab",
+        "name": "Trang Chủ",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a99685a463f168d7",
+        "type": "ui_group",
+        "name": "GIÁM SÁT MÔI TRƯỜNG",
+        "tab": "bc5f1411ff50f89b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "954fab7481c462d5",
+        "type": "ui_group",
+        "name": "CÀI ĐẶT & BÁO CÁO",
+        "tab": "bc5f1411ff50f89b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "24abc32395101364",
+        "type": "tls-config",
+        "name": "TLS EMQX",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "46bc6355e542f1ad",
+        "type": "tls-config",
+        "name": "TLS EMQX",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "2cd11b9830d5e05e",
+        "type": "tls-config",
+        "name": "TLS EMQX",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "2953e3f2383c6058",
+        "type": "tls-config",
+        "name": "TLS EMQX",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "9ef894603fc91e2f",
+        "type": "mqtt-broker",
+        "name": "EMQX Cloud SSL",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "24abc32395101364",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dbcdf37385d51512",
+        "type": "mqtt-broker",
+        "name": "EMQX Cloud SSL",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "46bc6355e542f1ad",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2daf596dd9a4cdfb",
+        "type": "mqtt-broker",
+        "name": "EMQX Cloud SSL",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "2cd11b9830d5e05e",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "49e472951b9ada10",
+        "type": "mqtt-broker",
+        "name": "EMQX Cloud SSL",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "2953e3f2383c6058",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f75f1a217400901a",
+        "type": "tls-config",
+        "name": "TLS EMQX",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "tab_demo",
+        "type": "ui_tab",
+        "name": "Home Control",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "group_demo",
+        "type": "ui_group",
+        "name": "Mô phỏng Thiết bị",
+        "tab": "tab_demo",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "tab_home",
+        "type": "ui_tab",
+        "name": "Smart Home PRO",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "group_smart_home",
+        "type": "ui_group",
+        "name": "Điều Khiển Thiết Bị",
+        "tab": "tab_home",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "4094d4d6f27134bc",
+        "type": "ui-theme",
+        "name": "Medical Dark",
+        "colors": {
+            "surface": "#1e1e1e",
+            "primary": "#00E676",
+            "bgPage": "#121212",
+            "groupBg": "#2c2c2c",
+            "groupOutline": "#3e3e3e"
+        }
+    },
+    {
+        "id": "36381be2b577f36c",
+        "type": "ui-theme",
+        "name": "Medical Dark",
+        "colors": {
+            "surface": "#1E1E1E",
+            "primary": "#00E676",
+            "bgPage": "#121212",
+            "groupBg": "#252525",
+            "groupOutline": "#383838"
+        }
+    },
+    {
+        "id": "e2bb433b506d0b26",
+        "type": "ui-theme",
+        "name": "Medical Dark",
+        "colors": {
+            "surface": "#1E1E1E",
+            "primary": "#00E676",
+            "bgPage": "#121212",
+            "groupBg": "#252525",
+            "groupOutline": "#383838"
+        }
+    },
+    {
+        "id": "15a4d6ef9629ecb0",
+        "type": "tls-config",
+        "name": "TLS EMQX",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "913020cca9579257",
+        "type": "mqtt-broker",
+        "name": "EMQX Cloud SSL",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "f75f1a217400901a",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3e4ef2a8a361fdd6",
+        "type": "mqtt-broker",
+        "name": "EMQX Cloud SSL",
+        "broker": "v7f16116.ala.asia-southeast1.emqxsl.com",
+        "port": "8883",
+        "tls": "15a4d6ef9629ecb0",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cf8a82833bdd66d9",
+        "type": "ui-group",
+        "name": "LỊCH TRÌNH",
+        "page": "4df4d8d04fa1ee54",
+        "width": "4",
+        "height": "5",
+        "order": 2,
+        "showTitle": false,
+        "className": "glass-panel",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "4d4380094e8711ec",
+        "type": "ui-group",
+        "name": "BIỂU ĐỒ SINH HIỆU",
+        "page": "4df4d8d04fa1ee54",
+        "width": "5",
+        "height": "6",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "95438d24eb1148fe",
+        "type": "ui-group",
+        "name": "ĐIỀU KHIỂN",
+        "page": "4df4d8d04fa1ee54",
+        "width": "3",
+        "height": "6",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7e4251cd113a05f7",
+        "type": "ui-group",
+        "name": "NHẬT KÝ HOẠT ĐỘNG",
+        "page": "4df4d8d04fa1ee54",
+        "width": "4",
+        "height": "6",
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "fe75d7f5796c7ed0",
+        "type": "ui-group",
+        "name": "TRUNG TÂM GIÁM SÁT",
+        "page": "62ec7fc3d14af006",
+        "width": "8",
+        "height": "5",
+        "order": 1,
+        "showTitle": false,
+        "className": "glass-panel",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "929ebdba0964ccd9",
+        "type": "ui-group",
+        "name": "LỊCH TRÌNH",
+        "page": "62ec7fc3d14af006",
+        "width": "4",
+        "height": "5",
+        "order": 2,
+        "showTitle": false,
+        "className": "glass-panel",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "55b27ebc92ecb3bf",
+        "type": "ui-group",
+        "name": "BIỂU ĐỒ SINH HIỆU",
+        "page": "62ec7fc3d14af006",
+        "width": "5",
+        "height": "6",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "4f3ec8a5cb18f25a",
+        "type": "ui-group",
+        "name": "ĐIỀU KHIỂN",
+        "page": "62ec7fc3d14af006",
+        "width": "3",
+        "height": "6",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "34d92effdd94fe30",
+        "type": "ui-group",
+        "name": "NHẬT KÝ HOẠT ĐỘNG",
+        "page": "62ec7fc3d14af006",
+        "width": "4",
+        "height": "6",
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "62ec7fc3d14af006",
+        "type": "ui-page",
+        "name": "Hospital UI RFID",
+        "ui": "b97f3f40538901be",
+        "path": "/hospital_rfid",
+        "icon": "mdi-hospital-building",
+        "layout": "grid",
+        "theme": "36381be2b577f36c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "e09f864fbeccb847",
+        "type": "mqtt in",
+        "z": "cb55908037937082",
+        "name": "RFID Access",
+        "topic": "hospital/room1/access",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "913020cca9579257",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 680,
+        "wires": [
+            [
+                "53e037b89783d68d"
+            ]
+        ]
+    },
+    {
+        "id": "53e037b89783d68d",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "RFID",
+        "func": "var outLog = {\n    topic: \"log\",\n    payload: {\n        text: \"QUẸT THẺ: MỞ CỬA (Y TÁ)\",\n        icon: \"mdi-card-account-details-outline\",\n        color: \"#E040FB\",\n        bg: \"rgba(224, 64, 251, 0.15)\" \n    }\n};\nreturn outLog;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "2b9f09205e4b3931"
+            ]
+        ]
+    },
+    {
+        "id": "2408a2e1f26fd986",
+        "type": "mqtt in",
+        "z": "cb55908037937082",
+        "name": "Temp",
+        "topic": "hospital/room1/env",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "913020cca9579257",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "760d3fd51643306a",
+                "ba3dad7e4cb24cb2"
+            ]
+        ]
+    },
+    {
+        "id": "b50448d89fbf382d",
+        "type": "mqtt in",
+        "z": "cb55908037937082",
+        "name": "Hum",
+        "topic": "hospital/room1/hum",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "913020cca9579257",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "760d3fd51643306a",
+                "bd66f3dff433d522"
+            ]
+        ]
+    },
+    {
+        "id": "ca4780963f2c461d",
+        "type": "mqtt in",
+        "z": "cb55908037937082",
+        "name": "Alert",
+        "topic": "hospital/room1/alert",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "913020cca9579257",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "760d3fd51643306a",
+                "2b9f09205e4b3931",
+                "7c7dce589e267796"
+            ]
+        ]
+    },
+    {
+        "id": "e1463ee2909459db",
+        "type": "inject",
+        "z": "cb55908037937082",
+        "name": "Clock",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "tick",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "760d3fd51643306a"
+            ]
+        ]
+    },
+    {
+        "id": "760d3fd51643306a",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": " UI",
+        "func": "var data = flow.get('sys_data') || {\n    temp: 0, hum: 0, status: \"SAFE\", time: \"--:--\", date: \"--/--\", hour: 0\n};\n\nif (msg.topic.includes(\"env\")) data.temp = parseFloat(msg.payload).toFixed(1);\nif (msg.topic.includes(\"hum\")) data.hum = parseFloat(msg.payload).toFixed(0);\nif (msg.topic.includes(\"alert\")) data.status = msg.payload;\nif (msg.topic === \"tick\") {\n    var now = new Date();\n    data.time = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });\n    data.date = now.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit' });\n    data.seconds = now.getSeconds();\n    data.hour = now.getHours();\n}\n\nflow.set('sys_data', data);\n\nvar ui = { text: \"HỆ THỐNG ỔN ĐỊNH\", color: \"#00E676\", subColor: \"#006020\" };\n\nif (data.status === \"EMERGENCY\") {\n    ui.text = \"CẢNH BÁO: SOS !!!\";\n    ui.color = \"#FF5252\"; \n    ui.subColor = \"#600000\";\n} else if (data.status === \"PROCESSING\") {\n    ui.text = \"ĐANG XỬ LÝ SỰ CỐ\";\n    ui.color = \"#2979FF\";\n    ui.subColor = \"#002060\";\n} else if (data.status === \"MEDICATION\") {\n    ui.text = \"NHẮC NHỞ UỐNG THUỐC\";\n    ui.color = \"#FFD600\";\n    ui.subColor = \"#605000\";\n}\n\nvar medInfo = {\n    nextTime: \"--:--\",\n    label: \"LOADING...\",\n    isTime: false\n};\n\nif (data.hour < 8) {\n    medInfo.nextTime = \"08:00\"; medInfo.label = \"SÁNG\";\n} else if (data.hour >= 8 && data.hour < 18) {\n    medInfo.nextTime = \"18:00\"; medInfo.label = \"CHIỀU\";\n} else {\n    medInfo.nextTime = \"08:00\"; medInfo.label = \"NGÀY MAI\";\n}\n\nif (data.status === \"MEDICATION\") medInfo.isTime = true;\n\nmsg.payload = { ...data, ui: ui, med: medInfo };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "b851a01c442c74c1",
+                "69755a9e56370f51"
+            ]
+        ]
+    },
+    {
+        "id": "b851a01c442c74c1",
+        "type": "ui-template",
+        "z": "cb55908037937082",
+        "group": "fe75d7f5796c7ed0",
+        "page": "",
+        "ui": "",
+        "name": "Hero Card",
+        "order": 1,
+        "width": "8",
+        "height": "4",
+        "format": "<template>\n    <div class=\"hero-card\" :style=\"{ '--theme-color': msg.payload.ui.color }\">\n        <div class=\"scan-line\"></div>\n        <div class=\"top-bar\">\n            <div class=\"status-pill\">\n                <div class=\"dot-pulse\"></div>\n                <span>{{ msg.payload.ui.text }}</span>\n            </div>\n            <div class=\"date-badge\">{{ msg.payload.date }}</div>\n        </div>\n        <div class=\"clock-container\">\n            <div class=\"digital-clock\">\n                {{ msg.payload.time.slice(0, 5) }}<span class=\"seconds\">{{ msg.payload.time.slice(6, 8) }}</span>\n            </div>\n            <div class=\"room-label\">PHÒNG BỆNH SỐ 01</div>\n        </div>\n        <div class=\"gauges-row\">\n            <div class=\"gauge-box\">\n                <div class=\"gauge-val\" style=\"color: #FF9100\">{{ msg.payload.temp }}°</div>\n                <div class=\"gauge-bar\"><div class=\"fill\" :style=\"{ width: (msg.payload.temp/50*100)+'%', background: '#FF9100' }\"></div></div>\n                <div class=\"gauge-label\">NHIỆT ĐỘ</div>\n            </div>\n            <div class=\"gauge-box\">\n                <div class=\"gauge-val\" style=\"color: #00E676\">{{ msg.payload.hum }}%</div>\n                <div class=\"gauge-bar\"><div class=\"fill\" :style=\"{ width: (msg.payload.hum/100*100)+'%', background: '#00E676' }\"></div></div>\n                <div class=\"gauge-label\">ĐỘ ẨM</div>\n            </div>\n        </div>\n    </div>\n</template>\n<style>\n    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');\n    .hero-card { font-family: 'Chakra Petch', sans-serif; background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(35,35,35,0.95)); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; border: 1px solid rgba(255,255,255,0.1); position: relative; overflow: hidden; }\n    .scan-line { position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--theme-color); opacity: 0.3; filter: blur(5px); animation: scan 4s linear infinite; pointer-events: none; }\n    @keyframes scan { 0% { top: -10%; } 100% { top: 110%; } }\n    .top-bar { display: flex; justify-content: space-between; align-items: center; z-index: 2; }\n    .status-pill { display: flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.3); padding: 6px 12px; border-radius: 4px; border-left: 3px solid var(--theme-color); color: var(--theme-color); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }\n    .dot-pulse { width: 8px; height: 8px; background: var(--theme-color); border-radius: 50%; box-shadow: 0 0 10px var(--theme-color); animation: blink 1s infinite alternate; }\n    .date-badge { font-size: 0.85rem; color: #888; font-weight: 600; }\n    .clock-container { text-align: center; margin: 10px 0; z-index: 2; }\n    .digital-clock { font-size: 4rem; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -2px; }\n    .seconds { font-size: 1.5rem; color: var(--theme-color); margin-left: 5px; vertical-align: super; opacity: 0.8; }\n    .room-label { font-size: 0.8rem; letter-spacing: 4px; color: #555; margin-top: 5px; font-weight: bold; }\n    .gauges-row { display: flex; gap: 20px; z-index: 2; }\n    .gauge-box { flex: 1; background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px; }\n    .gauge-val { font-size: 1.2rem; font-weight: bold; margin-bottom: 5px; }\n    .gauge-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }\n    .fill { height: 100%; transition: width 1s ease; border-radius: 3px; }\n    .gauge-label { font-size: 0.65rem; color: #666; margin-top: 5px; }\n    @keyframes blink { from { opacity: 1; } to { opacity: 0.3; } }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 710,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69755a9e56370f51",
+        "type": "ui-template",
+        "z": "cb55908037937082",
+        "group": "929ebdba0964ccd9",
+        "page": "",
+        "ui": "",
+        "name": "Medication Widget",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "format": "<template>\n    <div class=\"med-wrapper\" :class=\"{ 'med-active': msg.payload.med.isTime }\">\n        <div class=\"med-content\">\n            <div class=\"icon-circle\">\n                <v-icon :color=\"msg.payload.med.isTime ? '#000' : '#FFF'\" size=\"large\">{{ msg.payload.med.isTime ? 'mdi-bell-ring' : 'mdi-pill' }}</v-icon>\n            </div>\n            <div class=\"med-text\">\n                <div class=\"med-header\">LIỀU TIẾP THEO</div>\n                <div class=\"med-time\">{{ msg.payload.med.nextTime }}</div>\n                <div class=\"med-sub\">{{ msg.payload.med.label }}</div>\n            </div>\n        </div>\n    </div>\n</template>\n<style>\n    .med-wrapper { background: #1E1E1E; border-radius: 16px; height: 100%; display: flex; align-items: center; justify-content: center; border: 1px solid #333; transition: all 0.3s ease; }\n    .med-active { background: #FFD600 !important; color: #000 !important; border-color: #FFF; animation: shake 0.5s infinite alternate; }\n    .med-active .med-header, .med-active .med-time, .med-active .med-sub { color: #000 !important; }\n    .med-active .icon-circle { background: #FFF !important; }\n    .med-content { text-align: center; }\n    .icon-circle { width: 50px; height: 50px; background: #2979FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }\n    .med-header { font-size: 0.7rem; color: #888; font-weight: 700; letter-spacing: 1px; }\n    .med-time { font-size: 2.5rem; font-weight: 800; line-height: 1; color: #fff; font-family: 'Chakra Petch', sans-serif; }\n    .med-sub { font-size: 0.9rem; opacity: 0.7; font-weight: bold; margin-top: 5px; }\n    @keyframes shake { 0% { transform: translateY(0); } 100% { transform: translateY(-2px); } }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 730,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f6d1d9e36ee2d02",
+        "type": "ui-template",
+        "z": "cb55908037937082",
+        "group": "fe75d7f5796c7ed0",
+        "page": "",
+        "ui": "",
+        "name": "Global CSS",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<style>\n    .nr-dashboard-card-title { display: none !important; }\n    .v-card { background: transparent !important; box-shadow: none !important; }\n    /* Ẩn scrollbar xấu xí */\n    ::-webkit-scrollbar { width: 5px; }\n    ::-webkit-scrollbar-track { background: transparent; }\n    ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 1030,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0ca8e16f7aab84f",
+        "type": "ui-chart",
+        "z": "cb55908037937082",
+        "group": "55b27ebc92ecb3bf",
+        "name": "Chart Temp",
+        "label": "NHIỆT ĐỘ (°C)",
+        "order": 1,
+        "chartType": "line",
+        "category": "temp",
+        "categoryType": "str",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "HH:mm:ss",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "°C",
+        "yAxisProperty": "",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "50",
+        "bins": "",
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "30",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "5",
+        "height": "5",
+        "className": "",
+        "interpolation": "linear",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "742ac509e4456db4",
+        "type": "ui-chart",
+        "z": "cb55908037937082",
+        "group": "55b27ebc92ecb3bf",
+        "name": "Chart Hum",
+        "label": "ĐỘ ẨM (%)",
+        "order": 2,
+        "chartType": "line",
+        "category": "hum",
+        "categoryType": "str",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "HH:mm:ss",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "%",
+        "yAxisProperty": "",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": "",
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "30",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "5",
+        "height": "5",
+        "className": "",
+        "interpolation": "linear",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c7dce589e267796",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "Gửi Mail + Info",
+        "func": "var lastSent = flow.get('email_last_sent') || 0;\nvar now = Date.now();\nvar cooldown = 60000;\n\nif (msg.payload === \"EMERGENCY\") {\n    if (now - lastSent > cooldown) {\n        flow.set('email_last_sent', now);\n        var sysData = flow.get('sys_data') || { temp: \"?\", hum: \"?\" };\n        msg.to = \"DIA_CHI_EMAIL_CUA_BAN@gmail.com\"; \n        msg.topic = \"⚠️ [SOS] CẢNH BÁO BỆNH VIỆN - PHÒNG 1\";\n        msg.payload = `\n            <h3>⚠️ PHÁT HIỆN SỰ CỐ NGÃ / SOS</h3>\n            <p><strong>Thời gian:</strong> ${new Date().toLocaleString('vi-VN')}</p>\n            <hr>\n            <h4>MÔI TRƯỜNG:</h4>\n            <ul>\n                <li>Nhiệt độ: ${sysData.temp}°C</li>\n                <li>Độ ẩm: ${sysData.hum}%</li>\n            </ul>\n        `;\n        return msg;\n    } \n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "fa176a1c14d464b2"
+            ]
+        ]
+    },
+    {
+        "id": "fa176a1c14d464b2",
+        "type": "e-mail",
+        "z": "cb55908037937082",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": false,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "duongbaquyet101@gmail.com",
+        "dname": "Send Email",
+        "x": 690,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "eb1064ea87ee0d79",
+        "type": "mqtt in",
+        "z": "cb55908037937082",
+        "name": "Light Status",
+        "topic": "hospital/room1/device/light",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "913020cca9579257",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "b662e9356fbf5d82"
+            ]
+        ]
+    },
+    {
+        "id": "32d07e11406c9188",
+        "type": "ui-switch",
+        "z": "cb55908037937082",
+        "name": "Switch Light",
+        "label": "Đèn Phòng",
+        "group": "4f3ec8a5cb18f25a",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": false,
+        "topic": "ui_control",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "mdi-lightbulb",
+        "oncolor": "warning",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "mdi-lightbulb-off",
+        "offcolor": "grey",
+        "x": 110,
+        "y": 480,
+        "wires": [
+            [
+                "b662e9356fbf5d82"
+            ]
+        ]
+    },
+    {
+        "id": "b662e9356fbf5d82",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "Sync Light",
+        "func": "var isUI = (msg.topic === \"ui_control\");\nvar state = false;\n\nif (isUI) state = msg.payload;\nelse { var s = String(msg.payload).toUpperCase(); state = (s === \"ON\" || s === \"TRUE\" || s === \"1\"); }\n\nvar outSwitch = isUI ? null : { payload: state };\nvar outMQTT = isUI ? { topic: \"hospital/room1/control\", payload: state ? \"LIGHT_ON\" : \"LIGHT_OFF\" } : null;\n\nvar outLog = null;\nvar last = flow.get('last_light') || {val: null, time: 0};\nvar now = Date.now();\n\nif (state !== last.val || (now - last.time > 2000)) {\n    flow.set('last_light', {val: state, time: now});\n    outLog = { topic: \"log\", payload: { text: state ? \"ĐÈN ĐÃ BẬT\" : \"ĐÈN ĐÃ TẮT\", icon: \"mdi-lightbulb\", color: state ? \"#FFD700\" : \"#666\", bg: state ? \"rgba(255, 215, 0, 0.1)\" : \"transparent\" } };\n}\n\nreturn [outSwitch, outMQTT, outLog];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 460,
+        "wires": [
+            [
+                "32d07e11406c9188"
+            ],
+            [
+                "14e35fa9874f0c0f"
+            ],
+            [
+                "2b9f09205e4b3931"
+            ]
+        ]
+    },
+    {
+        "id": "5ebe5d48410ab0cd",
+        "type": "mqtt in",
+        "z": "cb55908037937082",
+        "name": "Fan Status",
+        "topic": "hospital/room1/device/fan",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "913020cca9579257",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 560,
+        "wires": [
+            [
+                "903d7ecb1e3c92ed"
+            ]
+        ]
+    },
+    {
+        "id": "d5c2597abc03bc88",
+        "type": "ui-switch",
+        "z": "cb55908037937082",
+        "name": "Switch Fan",
+        "label": "Quạt Tường",
+        "group": "4f3ec8a5cb18f25a",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": false,
+        "topic": "ui_control",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "mdi-fan",
+        "oncolor": "success",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "mdi-fan-off",
+        "offcolor": "grey",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "903d7ecb1e3c92ed"
+            ]
+        ]
+    },
+    {
+        "id": "903d7ecb1e3c92ed",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "Sync Fan",
+        "func": "var isUI = (msg.topic === \"ui_control\");\nvar state = false;\n\nif (isUI) state = msg.payload;\nelse { var s = String(msg.payload).toUpperCase(); state = (s === \"ON\" || s === \"TRUE\" || s === \"1\"); }\n\nvar outSwitch = isUI ? null : { payload: state };\nvar outMQTT = isUI ? { topic: \"hospital/room1/control\", payload: state ? \"FAN_ON\" : \"FAN_OFF\" } : null;\n\nvar outLog = null;\nvar last = flow.get('last_fan') || {val: null, time: 0};\nvar now = Date.now();\n\nif (state !== last.val || (now - last.time > 2000)) {\n    flow.set('last_fan', {val: state, time: now});\n    outLog = { topic: \"log\", payload: { text: state ? \"QUẠT ĐÃ BẬT\" : \"QUẠT ĐÃ TẮT\", icon: \"mdi-fan\", color: state ? \"#00E676\" : \"#666\", bg: state ? \"rgba(0, 230, 118, 0.1)\" : \"transparent\" } };\n}\n\nreturn [outSwitch, outMQTT, outLog];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 600,
+        "wires": [
+            [
+                "d5c2597abc03bc88"
+            ],
+            [
+                "14e35fa9874f0c0f"
+            ],
+            [
+                "2b9f09205e4b3931"
+            ]
+        ]
+    },
+    {
+        "id": "ff8c4d14eb5a8ff6",
+        "type": "ui-slider",
+        "z": "cb55908037937082",
+        "group": "4f3ec8a5cb18f25a",
+        "name": "Slider Speed",
+        "label": "Tốc độ gió",
+        "tooltip": "",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "outs": "all",
+        "topic": "ui_speed",
+        "topicType": "str",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "className": "",
+        "x": 110,
+        "y": 740,
+        "wires": [
+            [
+                "13bc84432871210b"
+            ]
+        ]
+    },
+    {
+        "id": "13bc84432871210b",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "Logic Speed",
+        "func": "var speed = msg.payload;\nvar outMQTT = { topic: \"hospital/room1/control\", payload: \"FAN_SPEED_\" + speed };\nvar outLog = { topic: \"log\", payload: { text: \"CHỈNH TỐC ĐỘ: \" + speed, icon: \"mdi-speedometer\", color: \"#2979FF\", bg: \"transparent\" } };\nreturn [outMQTT, outLog];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 740,
+        "wires": [
+            [
+                "14e35fa9874f0c0f"
+            ],
+            [
+                "2b9f09205e4b3931"
+            ]
+        ]
+    },
+    {
+        "id": "2b9f09205e4b3931",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "Log Manager",
+        "func": "var history = flow.get('history_log') || [];\nvar lastEntryCache = flow.get('last_log_cache') || { text: '', timestamp: 0 };\nvar entry = {};\nvar now = Date.now(); \nvar time = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });\n\n\n\nif (msg.topic === \"log\" && msg.payload) {\n    entry = { time: time, ...msg.payload, timestamp: now };\n} else if (msg.topic && msg.topic.includes(\"alert\")) {\n    if (msg.payload === \"EMERGENCY\") entry = { time: time, text: \"CẢNH BÁO SOS!\", icon: \"mdi-alert\", color: \"#FF5252\", timestamp: now };\n    else if (msg.payload === \"SAFE\") entry = { time: time, text: \"Đã an toàn\", icon: \"mdi-shield-check\", color: \"#00E676\", timestamp: now };\n    else if (msg.payload === \"PROCESSING\") entry = { time: time, text: \"Đã tiếp nhận\", icon: \"mdi-account-check\", color: \"#2979FF\", timestamp: now };\n} else if (msg.topic === \"hospital/room1/access\") {\n    entry = { time: time, text: \"QUẸT THẺ: MỞ CỬA (Y TÁ)\", icon: \"mdi-card-account-details-outline\", color: \"#E040FB\", timestamp: now };\n}\n\nif (entry.text) {\n    if (entry.text === lastEntryCache.text && (now - lastEntryCache.timestamp < 2000)) {\n        return null; \n    }\n\n    flow.set('last_log_cache', { text: entry.text, timestamp: now });\n\n    history.unshift(entry);\n    if (history.length > 20) history.pop();\n    flow.set('history_log', history);\n}\n\nmsg.payload = history;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 620,
+        "wires": [
+            [
+                "5ba0d566c4d57346"
+            ]
+        ]
+    },
+    {
+        "id": "5ba0d566c4d57346",
+        "type": "ui-template",
+        "z": "cb55908037937082",
+        "group": "34d92effdd94fe30",
+        "name": "Notification List",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<template>\n    <div class=\"notif-list\">\n        <transition-group name=\"slide\">\n            <div v-for=\"(item, idx) in msg.payload\" :key=\"idx\" class=\"notif-item\" :style=\"{ backgroundColor: item.bg || 'rgba(255,255,255,0.02)' }\">\n                <div class=\"n-icon\" :style=\"{ backgroundColor: item.color }\">\n                    <v-icon color=\"#000\" size=\"small\">{{ item.icon }}</v-icon>\n                </div>\n                <div class=\"n-content\">\n                    <div class=\"n-text\" :style=\"{ color: item.color }\">{{ item.text }}</div>\n                    <div class=\"n-time\">{{ item.time }}</div>\n                </div>\n            </div>\n        </transition-group>\n    </div>\n</template>\n<style>\n    .notif-list { height: 100%; overflow-y: auto; padding: 5px; }\n    .notif-item {\n        display: flex; align-items: center; gap: 15px;\n        padding: 10px; margin-bottom: 8px;\n        border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);\n    }\n    .n-icon {\n        width: 32px; height: 32px; border-radius: 50%;\n        display: flex; align-items: center; justify-content: center;\n        box-shadow: 0 4px 10px rgba(0,0,0,0.3);\n    }\n    .n-text { font-weight: 700; font-size: 0.9rem; margin-bottom: 2px; }\n    .n-time { font-size: 0.75rem; color: #666; }\n    .slide-enter-active { transition: all 0.4s ease; }\n    .slide-enter-from { opacity: 0; transform: translateY(-10px); }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1240,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "14e35fa9874f0c0f",
+        "type": "mqtt out",
+        "z": "cb55908037937082",
+        "name": "MQTT OUT",
+        "topic": "hospital/room1/control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "913020cca9579257",
+        "x": 870,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a5b0417b77f28c63",
+        "type": "ui-button",
+        "z": "cb55908037937082",
+        "group": "4f3ec8a5cb18f25a",
+        "name": "Reset Button",
+        "label": "RESET / AN TOÀN",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "primary",
+        "bgcolor": "",
+        "className": "",
+        "icon": "mdi-restore",
+        "iconPosition": "left",
+        "payload": "RESET",
+        "payloadType": "str",
+        "topic": "reset",
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "f93c43b40e141905"
+            ]
+        ]
+    },
+    {
+        "id": "f93c43b40e141905",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "Reset Logic",
+        "func": "var m1 = { topic: \"hospital/room1/control\", payload: \"CLEAR_ALARM\" };\nvar m2 = { topic: \"hospital/room1/alert\", payload: \"SAFE\", retain: true };\nreturn [m1, m2];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 800,
+        "wires": [
+            [
+                "14e35fa9874f0c0f"
+            ],
+            [
+                "75e7de952a7ad4c0"
+            ]
+        ]
+    },
+    {
+        "id": "75e7de952a7ad4c0",
+        "type": "mqtt out",
+        "z": "cb55908037937082",
+        "name": "Update Status",
+        "topic": "hospital/room1/alert",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "913020cca9579257",
+        "x": 820,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ba3dad7e4cb24cb2",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "To Number",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "f0ca8e16f7aab84f"
+            ]
+        ]
+    },
+    {
+        "id": "bd66f3dff433d522",
+        "type": "function",
+        "z": "cb55908037937082",
+        "name": "To Number",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "742ac509e4456db4"
+            ]
+        ]
+    }
+]
