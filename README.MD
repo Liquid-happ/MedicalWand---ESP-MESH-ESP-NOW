@@ -93,7 +93,7 @@ Medical Wand cung cấp các tính năng cốt lõi sau:
 
 ## 5. Cài Đặt & Cấu Hình Phần Mềm
 
-Yêu cầu phần mềm bao gồm Arduino IDE (với Board ESP32), các thư viện MPU6050, DHT, ESP-NOW, PubSubClient, và Node-RED (với Dashboard 2.0). Cần cấu hình:
+Yêu cầu phần mềm bao gồm Arduino IDE (với Board ESP32), các thư viện MPU6050, DHT, SERVO, SSD1306, ESP-NOW, PubSubClient, và Node-RED (với Dashboard 2.0). Cần cấu hình:
 1.  Thông tin **WIFI\_SSID** và **MQTT Broker** trong file `Config.h` của từng Node.
 2.  Các địa chỉ **MAC** của các Node để thiết lập ESP-NOW Peer.
 3.  Cấu hình **Email SMTP** (Mật khẩu ứng dụng Gmail) trong Node-RED.
@@ -115,7 +115,7 @@ Hệ thống sử dụng **Node-RED Dashboard 2.0** – phiên bản hoàn toàn
 - Hỗ trợ layout Grid CSS hiện đại, kéo thả thoải mái không cần code HTML.
 - Tích hợp sẵn PWA → có thể cài đặt lên màn hình chính điện thoại như app thật.
 
-Kết quả: Chỉ với Node-RED thuần, mình có một dashboard trông giống ứng dụng thương mại trị giá hàng nghìn USD, hoàn toàn miễn phí và chạy mượt trên Raspberry Pi hoặc PC bệnh viện 24/7.
+Kết quả: Chỉ với Node-RED thuần, mình có một dashboard trông giống ứng dụng thương mại, hoàn toàn miễn phí và chạy mượt trên giao diện thiết bị bệnh viện 24/7.
 
 Link tham khảo chính thức:  
 https://dashboard.flowfuse.com
@@ -154,3 +154,5 @@ Hệ thống không chỉ đáp ứng đầy đủ các yêu cầu đề ra mà 
 Một dự án nhỏ nhưng mang lại giá trị thực tế rất lớn cho cộng đồng chăm sóc sức khỏe.
 
 Cảm ơn thầy cô, bạn bè và gia đình đã đồng hành!
+Cảm ơn các bạn đã quan tâm đến dự án của mình!
+Trân trọng!
