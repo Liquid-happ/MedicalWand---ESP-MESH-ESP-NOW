@@ -72,7 +72,7 @@ Hệ thống bao gồm 3 Node ESP32, MPU6050, DHT11, RFID RC522, OLED SSD1306, S
 | **Buzzer** | + | GPIO 15 |
 | **LED Báo Hiệu (Red)** | + | GPIO 19 |
 
-![Node 3](images/NODE_3.jpg)
+![Node 3](images/NODE_3.png)
 ---
 
 ## 4. Tính Năng Nổi Bật
