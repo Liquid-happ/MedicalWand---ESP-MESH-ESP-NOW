@@ -33,13 +33,14 @@ void loop() {
               roomState = NORMAL; 
               sendToNode2("SAFE"); 
           }
-          else if (roomState == NORMAL) { 
+          else if (roomState == NORMAL) {
               sendToNode2("SAFE");
           }
       }
   }
   lastBtn = currBtn;
 
+  // Điều khiển đèn LED trạng thái trên Remote
   if(roomState == SOS) {
       if((millis()/200)%2) digitalWrite(LED_RED_PIN, HIGH); else digitalWrite(LED_RED_PIN, LOW);
   } else if(roomState == PROCESSING) {
