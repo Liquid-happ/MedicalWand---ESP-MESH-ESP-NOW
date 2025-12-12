@@ -1,30 +1,28 @@
-GIẤY PHÉP PHẦN MỀM (LICENSE)
+CERN Open Hardware Licence Version 2 – Permissive
+Copyright © 2025 MedicalWand Project
 
-Tên Giấy phép: The MIT License (MIT)
+1. Giới thiệu
+Giấy phép này cho phép bất kỳ ai sử dụng, chỉnh sửa, sao chép, sản xuất hoặc phân phối lại thiết kế phần cứng, miễn là bạn giữ lại thông tin attribution (ghi công) và không áp đặt thêm bất kỳ hạn chế pháp lý nào.
 
-Bản quyền (Copyright) (c) 2025 [MedicalWand Project]
+2. Quyền của bạn
+- Theo giấy phép này, bạn được quyền:
+- Sử dụng tài liệu thiết kế (Documentation).
+- Sao chép và phân phối lại thiết kế.
+- Chỉnh sửa, thay đổi, tạo phiên bản phái sinh.
+- Sản xuất phần cứng từ tài liệu thiết kế.
+- Phân phối, sử dụng và bán sản phẩm phần cứng được tạo ra.
+- Tất cả đều miễn phí và không hạn chế, với điều kiện bạn tuân thủ điều khoản “Bảo lưu công khai” ở phần dưới.
 
-ĐIỀU KHOẢN CẤP PHÉP (Permissions)
+3. Nghĩa vụ của bạn
+- Khi phân phối tài liệu hoặc sản phẩm dựa trên thiết kế này, bạn phải:
+- Giữ nguyên thông báo bản quyền và giấy phép CERN-OHL-P trong mọi bản sao.
+- Ghi rõ các thay đổi (nếu bạn đã chỉnh sửa).
+- Không được thêm các hạn chế pháp lý khác đối với người nhận tiếp theo.
 
-Quyền hạn được cấp MIỄN PHÍ, cho bất kỳ cá nhân nào sở hữu một bản sao
-của phần mềm này và các tệp tài liệu liên quan, để xử lý Phần mềm mà không bị giới hạn, bao gồm:
-
-* Quyền sử dụng (use), sao chép (copy), sửa đổi (modify), và hợp nhất (merge).
-* Quyền xuất bản (publish), phân phối (distribute), và cấp phép lại (sublicense).
-* Quyền bán các bản sao (sell copies) của Phần mềm.
-* Cho phép người khác được cung cấp Phần mềm này để sử dụng, với điều kiện duy nhất là phải tuân thủ các điều kiện dưới đây.
-
-ĐIỀU KIỆN (Conditions)
-
-Thông báo bản quyền ở trên và thông báo quyền cho phép này phải được BAO GỒM
-trong tất cả các bản sao hoặc các phần đáng kể của Phần mềm.
-
-TỪ CHỐI BẢO HÀNH & GIỚI HẠN TRÁCH NHIỆM
-
-PHẦN MỀM ĐƯỢC CUNG CẤP "NGUYÊN TRẠNG" (AS IS), KHÔNG CÓ BẤT KỲ BẢO HÀNH NÀO,
-DÙ RÕ RÀNG HAY NGỤ Ý, BAO GỒM NHƯNG KHÔNG GIỚI HẠN Ở CÁC BẢO ĐẢM VỀ KHẢ NĂNG
-THƯƠNG MẠI, PHÙ HỢP VỚI MỤC ĐÍCH CỤ THỂ VÀ KHÔNG VI PHẠM BẢN QUYỀN.
-
-TRONG MỌI TRƯỜNG HỢP, CÁC TÁC GIẢ HOẶC CHỦ SỞ HỮU BẢN QUYỀN SẼ KHÔNG CHỊU TRÁCH NHIỆM
-ĐỐI VỚI BẤT KỲ KHIẾU NẠI, THIỆT HẠI HOẶC TRÁCH NHIỆM PHÁP LÝ NÀO KHÁC, PHÁT SINH TỪ
-HOẶC LIÊN QUAN ĐẾN PHẦN MỀM, HOẶC VIỆC SỬ DỤNG HOẶC GIAO DỊCH KHÁC TRONG PHẦN MỀM.
+4. Tuyên bố miễn trừ trách nhiệm
+- TÀI LIỆU THIẾT KẾ ĐƯỢC CUNG CẤP “NGUYÊN TRẠNG”,
+KHÔNG BẢO HÀNH dưới bất kỳ hình thức nào, bao gồm:
+- Bảo đảm thương mại
+- Phù hợp mục đích sử dụng
+- Không vi phạm bản quyền
+- Tác giả hoặc người cấp phép không chịu trách nhiệm đối với bất kỳ thiệt hại nào phát sinh từ việc sử dụng thiết kế.
