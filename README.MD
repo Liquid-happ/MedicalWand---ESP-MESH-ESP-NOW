@@ -114,6 +114,7 @@ Hệ thống sử dụng **Node-RED Dashboard 2.0** – phiên bản hoàn toàn
 - Theme tùy chỉnh dễ dàng bằng JSON (mình đã tạo theme kính mờ trong suốt rất đẹp).
 - Hỗ trợ layout Grid CSS hiện đại, kéo thả thoải mái không cần code HTML.
 - Tích hợp sẵn PWA → có thể cài đặt lên màn hình chính điện thoại như app thật.
+Đối với dự án: Cài đặt Node-RED Dashboard 2.0 cùng các thư viện cần thiết, import file (.node-red/flows.json)
 
 Kết quả: Chỉ với Node-RED thuần, mình có một dashboard trông giống ứng dụng thương mại, hoàn toàn miễn phí và chạy mượt trên giao diện thiết bị bệnh viện 24/7.
 
