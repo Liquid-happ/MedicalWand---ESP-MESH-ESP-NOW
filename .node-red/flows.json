@@ -826,9 +826,9 @@
     {
         "id": "62ec7fc3d14af006",
         "type": "ui-page",
-        "name": "Hospital UI RFID",
+        "name": "Hospital UI ",
         "ui": "b97f3f40538901be",
-        "path": "/hospital_rfid",
+        "path": "/hospital_ui",
         "icon": "mdi-hospital-building",
         "layout": "grid",
         "theme": "36381be2b577f36c",
