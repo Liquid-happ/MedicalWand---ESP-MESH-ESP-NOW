@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/badge/Platform-ESP32-orange.svg)]()
 [![Protocol](https://img.shields.io/badge/Protocol-ESP--NOW%20%7C%20MQTT-green.svg)]()
 [![Dashboard](https://img.shields.io/badge/Dashboard-Node--RED-red.svg)]()
-[![License](https://img.shields.io/badge/License-CERN--OHL--P-blue.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
 ---
 
